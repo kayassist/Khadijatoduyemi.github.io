@@ -76,10 +76,10 @@ body {
 }
 
 .hero-photo img {
-  width: 200px;
-  height: 200px;
+  width: 350px;
+  height: 300px;
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: 60%;
   box-shadow: 0 4px 22px rgba(0,0,0,0.24);
   border: 4px solid var(--teal);
 }
@@ -328,7 +328,7 @@ body {
 
 .portfolio-metric {
   background: #182443;
-  color: var(--gold);
+  color: var(--white);
   padding: 1rem 2rem;
   border-radius: 16px;
   font-size: 1.3rem;
