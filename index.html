@@ -5,6 +5,65 @@
   <title>Chaos-Free Growth: Virtual Assistant Services for Founders</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="main.css">
+  <style>
+    body { font-family: Arial, sans-serif; background: #f8f8f8; margin: 0; padding: 20px; }
+    h1, h2, h3 { color: #292d32; }
+    .navbar { display: flex; align-items: center; background: #fff; border-bottom: 1px solid #e0e0e0; padding: 12px 0; }
+    .logo-circle { width: 40px; height: 40px; background: #292d32; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.3em; margin-right: 20px; }
+    .nav-links { list-style: none; display: flex; gap: 18px; margin: 0; padding: 0; }
+    .nav-links li a { text-decoration: none; color: #292d32; font-weight: 500; }
+    .hero-section { background: #fff; padding: 36px 0 24px 0; }
+    .hero-content { display: flex; flex-wrap: wrap; align-items: center; gap: 28px; }
+    .hero-photo img { width: 180px; border-radius: 50%; border: 3px solid #292d32; }
+    .hero-text { max-width: 540px; }
+    .hero-headline { font-size: 2em; margin: 0 0 10px 0; }
+    .hero-subheadline { font-size: 1.2em; margin: 0 0 12px 0; color: #008060; }
+    .hero-body { margin-bottom: 16px; }
+    .emphasis { color: #d43f8d; font-weight: bold; }
+    .hero-actions { display: flex; gap: 16px; }
+    .btn { display: inline-block; padding: 10px 22px; border-radius: 5px; font-weight: 600; text-decoration: none; }
+    .btn-whatsapp { background: #25d366; color: #fff; }
+    .btn-upwork { background: #6fda44; color: #fff; }
+    .impact-section { background: #f0faff; padding: 36px 0; }
+    .impact-metrics { display: flex; flex-wrap: wrap; gap: 16px; }
+    .metric-card { background: #fff; border-radius: 6px; padding: 18px; box-shadow: 0 1px 5px #e0e0e0; flex: 1; min-width: 220px; }
+    .impact-callout { margin-top: 16px; font-weight: 600; color: #008060; }
+    .work-process-section { background: #fff; padding: 36px 0; }
+    .work-steps { padding-left: 20px; margin: 0; }
+    .headshot-middle-section { text-align: center; margin: 30px 0; }
+    .headshot-middle img { width: 160px; border-radius: 50%; border: 3px solid #292d32; }
+    .services-section { background: #f8f8f8; padding: 36px 0; }
+    .services-grid { display: flex; flex-wrap: wrap; gap: 16px; }
+    .service-card { background: #fff; border-radius: 6px; padding: 18px; flex: 1; min-width: 210px; box-shadow: 0 1px 5px #e0e0e0; }
+    .metric { display: inline-block; background: #dff6e9; color: #008060; padding: 2px 10px; margin-bottom: 8px; border-radius: 4px; font-size: 0.95em; }
+    .portfolio-section { background: #fff; padding: 36px 0; }
+    .portfolio-gallery { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 15px; }
+    .work-img { width: 220px; border-radius: 6px; border: 1px solid #e0e0e0; background: #fff; }
+    .portfolio-metrics { display: flex; gap: 32px; font-size: 1.2em; font-weight: 600; color: #008060; }
+    .carousel-section { background: #f8f8f8; padding: 36px 0; }
+    .carousel { display: flex; align-items: center; gap: 18px; }
+    .carousel-btn { background: #292d32; color: #fff; border: none; padding: 10px 13px; border-radius: 50%; cursor: pointer; font-size: 1.2em; }
+    .carousel-track { display: flex; gap: 10px; }
+    .cert-img { width: 120px; border-radius: 6px; border: 1px solid #e0e0e0; background: #fff; }
+    .documents-section { background: #fff; padding: 36px 0; }
+    .doc-grid { display: flex; gap: 16px; flex-wrap: wrap; }
+    .doc-frame { background: #f8f8f8; padding: 10px; border-radius: 8px; box-shadow: 0 1px 5px #e0e0e0; display: flex; flex-direction: column; align-items: center; }
+    .doc-frame iframe { width: 260px; height: 320px; border: 1px solid #ccc; border-radius: 6px; }
+    .btn-download { background: #292d32; color: #fff; margin-top: 10px; }
+    .contact-section { background: #f0faff; padding: 36px 0; }
+    .contact-form { display: flex; flex-direction: column; gap: 12px; max-width: 400px; margin-bottom: 20px; }
+    .contact-form input, .contact-form textarea { padding: 8px 10px; border-radius: 4px; border: 1px solid #ccc; }
+    .btn-primary { background: #d43f8d; color: #fff; border: none; }
+    .contact-info { font-size: 1em; }
+    .contact-info a { color: #008060; text-decoration: none; }
+    .whatsapp-float { position: fixed; bottom: 24px; right: 24px; z-index: 100; }
+    .whatsapp-float img { width: 56px; height: 56px; }
+    footer { text-align: center; color: #555; padding: 18px 0; background: #fff; font-size: 1em; margin-top: 20px; border-top: 1px solid #e0e0e0; }
+    @media (max-width: 900px) {
+      .hero-content, .impact-metrics, .services-grid, .portfolio-gallery, .portfolio-metrics, .carousel-track, .doc-grid { flex-direction: column; align-items: stretch; }
+      .work-img, .cert-img, .doc-frame iframe { width: 100%; max-width: 320px; }
+    }
+  </style>
 </head>
 <body>
   <!-- Navbar -->
@@ -162,11 +221,20 @@
     <div class="carousel">
       <button class="carousel-btn left" onclick="prevSlide()">&#8592;</button>
       <div class="carousel-track">
-        <img src="asset-certificates/cert1.png" alt="Certificate 1" class="cert-img">
-        <img src="asset-certificates/cert2.png" alt="Certificate 2" class="cert-img">
-        <img src="asset-certificates/cert3.png" alt="Certificate 3" class="cert-img">
+        <img src="asset-certificates/1734861981230.jpg" alt="Certificate 1" class="cert-img">
+        <img src="asset-certificates/1734970936922.jpg" alt="Certificate 2" class="cert-img">
+        <img src="asset-certificates/1735021415742.jpg" alt="Certificate 3" class="cert-img">
+        <img src="asset-certificates/1735130774829.jpg" alt="Certificate 4" class="cert-img">
+        <img src="asset-certificates/1735138619237.jpg" alt="Certificate 5" class="cert-img">
+        <img src="asset-certificates/1735141641019.jpg" alt="Certificate 6" class="cert-img">
+        <img src="asset-certificates/72-virtual-assistant-certificate-khadijat-oduyemi%20(1).png" alt="Virtual Assistant Certificate" class="cert-img">
+        <img src="asset-certificates/KHADIJAT%20ODUYEMI%20(2).png" alt="Khadijat Oduyemi Certificate" class="cert-img">
+        <img src="asset-certificates/Prof.%20Admin.jpg" alt="Professional Admin Certificate" class="cert-img">
       </div>
       <button class="carousel-btn right" onclick="nextSlide()">&#8594;</button>
+    </div>
+    <div class="pdf-list" style="margin-top:16px;">
+      <iframe src="asset-certificates/Copy%20of%20CUSTOMER%20SERVICE%20CERTIFICATE.pdf" title="Customer Service Certificate"></iframe>
     </div>
   </section>
 
@@ -175,17 +243,33 @@
     <h2>CV & Portfolios</h2>
     <div class="doc-grid">
       <div class="doc-frame">
-        <iframe src="asset-pdf/KHADIJATODUYEMI-VACV.pdf" frameborder="0"></iframe>
-        <a href="asset-pdf/KHADIJATODUYEMI-VACV.pdf" download class="btn btn-download">Download CV</a>
+        <iframe src="asset-pdf/KHADIJAT%20ODUYEMI%20-%20VA%20CV.pdf" frameborder="0"></iframe>
+        <a href="asset-pdf/KHADIJAT%20ODUYEMI%20-%20VA%20CV.pdf" download class="btn btn-download">Download CV</a>
       </div>
       <div class="doc-frame">
-        <iframe src="asset-pdf/KayVAPortfolio.pdf" frameborder="0"></iframe>
-        <a href="asset-pdf/KayVAPortfolio.pdf" download class="btn btn-download">Download VA Portfolio</a>
+        <iframe src="asset-pdf/Kay%20VA%20Portfolio.pdf" frameborder="0"></iframe>
+        <a href="asset-pdf/Kay%20VA%20Portfolio.pdf" download class="btn btn-download">Download VA Portfolio</a>
       </div>
       <div class="doc-frame">
-        <iframe src="asset-pdf/KayCSPortfolio.pdf" frameborder="0"></iframe>
-        <a href="asset-pdf/KayCSPortfolio.pdf" download class="btn btn-download">Download CS Portfolio</a>
+        <iframe src="asset-pdf/Kay%20CS%20Portfolio.pdf" frameborder="0"></iframe>
+        <a href="asset-pdf/Kay%20CS%20Portfolio.pdf" download class="btn btn-download">Download CS Portfolio</a>
       </div>
+    </div>
+  </section>
+
+  <!-- Travel Management Images -->
+  <section class="portfolio-section" id="travel-management">
+    <h2>Travel Management Images</h2>
+    <div class="portfolio-gallery">
+      <img src="asset-travel-management/Accomodation%202.png" alt="Accommodation 2" class="work-img">
+      <img src="asset-travel-management/Accomodation%203.png" alt="Accommodation 3" class="work-img">
+      <img src="asset-travel-management/Accomodation%20booking%20.png" alt="Accommodation Booking" class="work-img">
+      <img src="asset-travel-management/Flight%20booking%201.png" alt="Flight Booking 1" class="work-img">
+      <img src="asset-travel-management/Flight%20booking%202.png" alt="Flight Booking 2" class="work-img">
+      <img src="asset-travel-management/Flight%20booking%203.png" alt="Flight Booking 3" class="work-img">
+      <img src="asset-travel-management/Screenshot%202025-02-07%20041548.png" alt="Screenshot 1" class="work-img">
+      <img src="asset-travel-management/Screenshot%202025-02-07%20041628.png" alt="Screenshot 2" class="work-img">
+      <img src="asset-travel-management/flight%20booking%204.png" alt="Flight Booking 4" class="work-img">
     </div>
   </section>
 
@@ -208,7 +292,7 @@
 
   <!-- WhatsApp Floating Button (SVG) -->
   <a href="https://wa.me/message/OTVHJH6FUULDL1" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
-    <img src="asset-whatsapp/whatsapp.microsoftHTMLdocument" alt="WhatsApp" />
+    <img src="asset-whatsapp/whatsapp-icon.svg" alt="WhatsApp" />
   </a>
 
   <!-- Footer -->
