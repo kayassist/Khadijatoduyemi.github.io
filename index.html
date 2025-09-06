@@ -5,20 +5,26 @@
   <title>Khadijat Oduyemi - Chaos-Free Growth: Virtual Assistant Services for Founders</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="main.css">
+  <!-- Favicon logo for tab bar -->
+  <link rel="icon" type="image/png" href="asset-whatsapp/kay-logo.png">
   <style>
-    body { font-family: Arial, sans-serif; background: #008080; margin: 0; padding: 20px; }
+    body { background: #008080; font-family: Arial, sans-serif; margin: 0; padding: 20px; }
     section { background: #008080 !important; }
-    .hero-section, .impact-section, .work-process-section, .services-section,
-    .portfolio-section, .carousel-section, .documents-section, .contact-section {
-      background: #008080 !important;
-    }
-    h1, h2, h3, p, li, .metric-card, .service-card {
-      color: #fff !important;
-    }
+    /* Text color mixture: white, black, gold */
+    h1, h2, h3 { color: #fff; }
+    .hero-headline { color: #FFD700; }
+    .hero-subheadline { color: #fff; }
+    .hero-body, .impact-section p, .service-card p, .portfolio-metric, .contact-info { color: #222; }
+    .emphasis, .metric-card h3, .service-card h3 { color: #FFD700; }
+    .impact-callout { color: #FFD700; }
+    .metric { color: #008060; }
+    /* Navbar */
     .navbar { display: flex; align-items: center; background: #fff; border-bottom: 1px solid #e0e0e0; padding: 12px 0; }
-    .logo-circle { width: 40px; height: 40px; background: #292d32; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.3em; margin-right: 20px; }
+    .logo-circle { width: 40px; height: 40px; background: #292d32; color: #FFD700; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.3em; margin-right: 20px; }
     .nav-links { list-style: none; display: flex; gap: 18px; margin: 0; padding: 0; }
-    .nav-links li a { text-decoration: none; color: #292d32; font-weight: 500; }
+    .nav-links li a { text-decoration: none; color: #292d32; font-weight: 500; transition: color 0.2s; }
+    .nav-links li a:hover { color: #FFD700; }
+    /* Hero Section Layout */
     .hero-section { padding: 36px 0 24px 0; }
     .hero-content {
       display: flex;
@@ -27,6 +33,7 @@
       gap: 28px;
       justify-content: space-between;
     }
+    /* Upright oval headshot */
     .hero-photo {
       order: 2; /* Move to the right */
       flex-shrink: 0;
@@ -36,29 +43,24 @@
       min-width: 300px;
     }
     .hero-photo img {
-      width: 320px;
-      height: 320px;
+      width: 270px;
+      height: 370px;
       object-fit: cover;
-      border-radius: 50%;
-      border: 8px solid #fff;
-      box-shadow: 0 4px 32px rgba(0,0,0,0.15);
+      border-radius: 50%/38%;
+      border: 10px solid #FFD700;
+      box-shadow: 0 4px 32px rgba(0,0,0,0.17);
       background: #fff;
       display: block;
     }
     .hero-text {
-      order: 1; /* Move to the left */
+      order: 1;
       max-width: 540px;
-      color: #fff;
       flex: 1 1 320px;
     }
-    .hero-headline, .hero-subheadline, .hero-body, .emphasis {
-      color: #fff;
-    }
-    .emphasis { color: #d43f8d; font-weight: bold; }
     .hero-actions { display: flex; gap: 16px; }
     .btn { display: inline-block; padding: 10px 22px; border-radius: 5px; font-weight: 600; text-decoration: none; }
     .btn-whatsapp { background: #25d366; color: #fff; }
-    .btn-upwork { background: #6fda44; color: #fff; }
+    .btn-upwork { background: #6fda44; color: #292d32; }
     .impact-section { padding: 36px 0; }
     .impact-metrics { display: flex; flex-wrap: wrap; gap: 16px; }
     .metric-card {
@@ -68,13 +70,9 @@
       box-shadow: 0 1px 5px #e0e0e0;
       flex: 1;
       min-width: 220px;
-      color: #fff !important;
     }
-    .impact-callout { margin-top: 16px; font-weight: 600; color: #fff; }
     .work-process-section { padding: 36px 0; }
     .work-steps { padding-left: 20px; margin: 0; }
-    .headshot-middle-section { text-align: center; margin: 30px 0; }
-    .headshot-middle img { width: 160px; border-radius: 50%; border: 3px solid #292d32; }
     .services-section { padding: 36px 0; }
     .services-grid { display: flex; flex-wrap: wrap; gap: 16px; }
     .service-card {
@@ -84,9 +82,8 @@
       flex: 1;
       min-width: 210px;
       box-shadow: 0 1px 5px #e0e0e0;
-      color: #fff !important;
     }
-    .metric { display: inline-block; background: #dff6e9; color: #008060; padding: 2px 10px; margin-bottom: 8px; border-radius: 4px; font-size: 0.95em; }
+    .metric { display: inline-block; background: #dff6e9; padding: 2px 10px; margin-bottom: 8px; border-radius: 4px; font-size: 0.95em; }
     .portfolio-section { padding: 36px 0; }
     .portfolio-gallery { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 15px; }
     .work-img {
@@ -94,19 +91,17 @@
       border-radius: 6px;
       border: 1px solid #e0e0e0;
       background: #009688 !important;
-      color: #fff !important;
     }
-    .portfolio-metrics { display: flex; gap: 32px; font-size: 1.2em; font-weight: 600; color: #fff; }
+    .portfolio-metrics { display: flex; gap: 32px; font-size: 1.2em; font-weight: 600; }
     .carousel-section { padding: 36px 0; }
     .carousel { display: flex; align-items: center; gap: 18px; }
-    .carousel-btn { background: #292d32; color: #fff; border: none; padding: 10px 13px; border-radius: 50%; cursor: pointer; font-size: 1.2em; }
+    .carousel-btn { background: #292d32; color: #FFD700; border: none; padding: 10px 13px; border-radius: 50%; cursor: pointer; font-size: 1.2em; }
     .carousel-track { display: flex; gap: 10px; }
     .cert-img {
       width: 120px;
       border-radius: 6px;
       border: 1px solid #e0e0e0;
       background: #009688 !important;
-      color: #fff !important;
     }
     .documents-section { padding: 36px 0; }
     .doc-grid { display: flex; gap: 16px; flex-wrap: wrap; }
@@ -118,16 +113,14 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      color: #fff !important;
     }
     .doc-frame iframe { width: 260px; height: 320px; border: 1px solid #ccc; border-radius: 6px; }
-    .btn-download { background: #292d32; color: #fff; margin-top: 10px; }
+    .btn-download { background: #292d32; color: #FFD700; margin-top: 10px; }
     .contact-section { padding: 36px 0; }
     .contact-form { display: flex; flex-direction: column; gap: 12px; max-width: 400px; margin-bottom: 20px; }
     .contact-form input, .contact-form textarea { padding: 8px 10px; border-radius: 4px; border: 1px solid #ccc; }
     .btn-primary { background: #d43f8d; color: #fff; border: none; }
-    .contact-info { font-size: 1em; color: #fff; }
-    .contact-info a { color: #fff; text-decoration: underline; }
+    .contact-info a { color: #FFD700; text-decoration: underline; }
     .whatsapp-float { position: fixed; bottom: 24px; right: 24px; z-index: 100; }
     .whatsapp-float img { width: 56px; height: 56px; }
     footer { text-align: center; color: #555; padding: 18px 0; background: #fff; font-size: 1em; margin-top: 20px; border-top: 1px solid #e0e0e0; }
