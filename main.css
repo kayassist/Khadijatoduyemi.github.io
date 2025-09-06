@@ -91,21 +91,35 @@ body {
   justify-content: center;
 }
 
-.hero-text h1 {
+.hero-headline {
   font-size: 2rem;
   color: var(--gold);
-  margin-bottom: 1rem;
+  margin-bottom: 0.7rem;
+  margin-top: 0;
 }
 
-.hero-text p {
-  font-size: 1.1rem;
+.hero-subheadline {
+  font-size: 1.3rem;
+  color: #25d366;
+  margin-bottom: 1.2rem;
+  margin-top: 0.2rem;
+}
+
+.hero-body {
+  font-size: 1.07rem;
   color: var(--white);
   margin-bottom: 1.7rem;
+}
+
+.hero-body .emphasis {
+  font-weight: bold;
+  color: var(--gold);
 }
 
 .hero-actions {
   display: flex;
   gap: 1rem;
+  margin-top: 1.2rem;
 }
 
 .btn {
@@ -151,6 +165,95 @@ body {
   margin-top: 0.7rem;
 }
 
+/* Impact Section */
+.impact-section {
+  background: #112340;
+  padding: 3rem 1rem;
+}
+
+.impact-section h2 {
+  color: var(--gold);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.impact-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.metric-card {
+  background: #182443;
+  border-radius: 14px;
+  padding: 1.2rem;
+  color: var(--white);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  text-align: left;
+}
+
+.metric-card h3 {
+  color: var(--teal);
+  margin-bottom: 0.6rem;
+}
+
+.impact-callout {
+  text-align: center;
+  margin-top: 2.5rem;
+  color: var(--gold);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+/* Work Process */
+.work-process-section {
+  background: #182443;
+  padding: 3rem 1rem;
+}
+
+.work-process-section h2 {
+  color: var(--gold);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.work-steps {
+  max-width: 720px;
+  margin: 2rem auto 0 auto;
+  color: var(--white);
+  background: #223057;
+  border-radius: 14px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  font-size: 1.1rem;
+}
+
+.work-steps li {
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Headshot Middle */
+.headshot-middle-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(120deg, #112340 60%, #0b1020 100%);
+  padding: 2.5rem 0;
+}
+
+.headshot-middle img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 22px rgba(0,0,0,0.24);
+  border: 3px solid var(--teal);
+}
+
+/* Services */
 .services-section {
   padding: 3rem 1rem;
   background: #112340;
@@ -183,6 +286,7 @@ body {
   display: block;
 }
 
+/* Portfolio */
 .portfolio-section {
   padding: 3rem 1rem;
   background: #0b1020;
@@ -214,6 +318,25 @@ body {
   transform: scale(1.08);
 }
 
+.portfolio-metrics {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.portfolio-metric {
+  background: #182443;
+  color: var(--gold);
+  padding: 1rem 2rem;
+  border-radius: 16px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.14);
+}
+
+/* Credentials Carousel */
 .carousel-section {
   padding: 3rem 1rem;
   background: #112340;
@@ -258,6 +381,7 @@ body {
   box-shadow: 0 2px 14px rgba(0,0,0,0.14);
 }
 
+/* CV & Portfolio */
 .documents-section {
   padding: 3rem 1rem;
   background: #0b1020;
@@ -295,43 +419,7 @@ body {
   border: none;
 }
 
-.testimonials-section {
-  padding: 3rem 1rem;
-  background: #112340;
-}
-
-.testimonials-section h2 {
-  color: var(--gold);
-  text-align: center;
-}
-
-.testimonials {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  margin-top: 2rem;
-  align-items: center;
-}
-
-.testimonial {
-  background: #182443;
-  border-radius: 18px;
-  padding: 1.2rem 1.4rem;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
-  max-width: 480px;
-}
-
-.testimonial blockquote {
-  font-style: italic;
-  margin: 0 0 0.6rem 0;
-  color: var(--white);
-}
-
-.testimonial span {
-  color: var(--teal);
-  font-weight: 500;
-}
-
+/* Contact */
 .contact-section {
   padding: 3rem 1rem;
   background: #0b1020;
@@ -417,16 +505,15 @@ footer {
     width: 140px;
     height: 140px;
   }
-  .hero-text h1 {
-    font-size: 1.3rem;
-  }
+  .hero-headline { font-size: 1.3rem; }
   .services-grid,
   .doc-grid {
     grid-template-columns: 1fr;
     flex-direction: column;
     gap: 1.2rem;
   }
-  .portfolio-gallery {
+  .portfolio-gallery,
+  .portfolio-metrics {
     flex-direction: column;
     gap: 1.2rem;
     align-items: center;
@@ -449,8 +536,9 @@ footer {
   .portfolio-section,
   .carousel-section,
   .documents-section,
-  .testimonials-section,
-  .contact-section {
+  .contact-section,
+  .impact-section,
+  .work-process-section {
     padding: 1.2rem 0.2rem;
   }
 }
