@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Khadijat Oduyemi – Virtual Assistant Portfolio</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo-circle">KO</div>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#credentials">Credentials</a></li>
+      <li><a href="#documents">Resume & Portfolios</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <div class="hero-photo">
+        <img src="asset-headshot/headshot.jpg" alt="Khadijat Oduyemi headshot">
+      </div>
+      <div class="hero-text">
+        <h1>I help founders reclaim time and focus on what truly grows their business.</h1>
+        <p>With 10+ years in admin support and certified VA training, I bring clarity to chaos—managing calendars, emails, and customer conversations with precision and warmth.</p>
+        <div class="hero-actions">
+          <a href="https://wa.me/message/OTVHJH6FUULDL1" class="btn btn-whatsapp" target="_blank">Chat on WhatsApp</a>
+          <a href="#services" class="btn btn-primary">Explore Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services-section" id="services">
+    <h2>What I Do</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>Scheduling & Calendar Management</h3>
+        <span class="metric">98% on-time meetings</span>
+        <p>I keep your calendar running smoothly, so you never miss a beat or double book.</p>
+      </div>
+      <div class="service-card">
+        <h3>Inbox & Email Support</h3>
+        <span class="metric">24-hour inbox response time</span>
+        <p>Inbox zero, daily! I reply quickly so your clients and partners always feel heard.</p>
+      </div>
+      <div class="service-card">
+        <h3>Customer Support</h3>
+        <span class="metric">4.8/5 satisfaction score</span>
+        <p>Friendly, professional support that turns customers into fans.</p>
+      </div>
+      <div class="service-card">
+        <h3>Data Entry & Reporting</h3>
+        <span class="metric">99.9% accuracy rate</span>
+        <p>Organized, error-free data and reports you can trust.</p>
+      </div>
+      <div class="service-card">
+        <h3>Onboarding & Operations Admin</h3>
+        <span class="metric">Same-day setup completion</span>
+        <p>Quick onboarding and smooth daily operations for your growing team.</p>
+      </div>
+      <div class="service-card">
+        <h3>Appointment Setting</h3>
+        <span class="metric">Over 80% response rate</span>
+        <p>I book appointments efficiently—your calendar fills up, hassle-free.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Gallery -->
+  <section class="portfolio-section" id="portfolio">
+    <h2>Portfolio Showcase</h2>
+    <div class="portfolio-gallery">
+      <img src="asset-work-sample-data Entry/sample1.jpg" alt="Data Entry Sample" class="work-img">
+      <img src="asset-work-sample-email-management/sample2.jpg" alt="Email Management Sample" class="work-img">
+      <img src="asset-work-sample-Google Calendar/sample3.jpg" alt="Google Calendar Sample" class="work-img">
+      <img src="asset-work-sample-hubspot-project-management/sample4.jpg" alt="Hubspot Project Management Sample" class="work-img">
+      <img src="asset-work-sample-scheduling/sample5.jpg" alt="Scheduling Sample" class="work-img">
+    </div>
+  </section>
+
+  <!-- Credentials Carousel -->
+  <section class="carousel-section" id="credentials">
+    <h2>Credentials</h2>
+    <div class="carousel">
+      <button class="carousel-btn left" onclick="prevSlide()">&#8592;</button>
+      <div class="carousel-track">
+        <img src="asset-certificates/cert1.jpg" alt="Certificate 1" class="cert-img">
+        <img src="asset-certificates/cert2.jpg" alt="Certificate 2" class="cert-img">
+        <img src="asset-certificates/cert3.jpg" alt="Certificate 3" class="cert-img">
+      </div>
+      <button class="carousel-btn right" onclick="nextSlide()">&#8594;</button>
+    </div>
+  </section>
+
+  <!-- Documents Section -->
+  <section class="documents-section" id="documents">
+    <h2>Resume & Portfolios</h2>
+    <div class="doc-grid">
+      <div class="doc-frame">
+        <iframe src="asset-pdf/KHADIJATODUYEMI-VACV.pdf" frameborder="0"></iframe>
+        <a href="asset-pdf/KHADIJATODUYEMI-VACV.pdf" download class="btn btn-download">Download Resume</a>
+      </div>
+      <div class="doc-frame">
+        <iframe src="asset-pdf/KayVAPortfolio.pdf" frameborder="0"></iframe>
+        <a href="asset-pdf/KayVAPortfolio.pdf" download class="btn btn-download">Download VA Portfolio</a>
+      </div>
+      <div class="doc-frame">
+        <iframe src="asset-pdf/KayCSPortfolio.pdf" frameborder="0"></iframe>
+        <a href="asset-pdf/KayCSPortfolio.pdf" download class="btn btn-download">Download CS Portfolio</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials-section" id="testimonials">
+    <h2>Client Feedback</h2>
+    <div class="testimonials">
+      <div class="testimonial">
+        <blockquote>
+          "Khadijat stepped in during a messy transition phase at our SaaS company and immediately brought calm to the chaos. Her ability to manage multiple stakeholders while keeping communication warm and structured was invaluable."
+        </blockquote>
+        <span>- Elira Vuković, Operations Lead at Belgrade TechWorks (Serbia)</span>
+      </div>
+      <div class="testimonial">
+        <blockquote>
+          "I was amazed at how quickly Khadijat adapted to our systems. She picked up our CRM faster than some full-time hires and was proactive in suggesting smarter workflows that saved me hours each week."
+        </blockquote>
+        <span>- Marlowe Finch, Founder of Finch & Co. Consulting (UK)</span>
+      </div>
+      <div class="testimonial">
+        <blockquote>
+          "Detail-oriented yet people-focused — that's how I'd describe Khadijat. She managed my investor scheduling flawlessly and even caught a double booking I would have embarrassed myself with."
+        </blockquote>
+        <span>- Andreas Heller, Partner at NordWest Ventures (Germany)</span>
+      </div>
+      <div class="testimonial">
+        <blockquote>
+          "The professionalism and warmth Khadijat brings to client support is rare. Our customers felt heard, and my team could finally breathe knowing the inbox was under control."
+        </blockquote>
+        <span>- Naomi Duarte, Creative Director at Duarte & Ellis Studio (New York, US)</span>
+      </div>
+      <div class="testimonial">
+        <blockquote>
+          "I've worked with assistants before, but Khadijat actually thinks with you. She doesn't just execute — she anticipates. That difference has been game-changing for my small but fast-growing agency."
+        </blockquote>
+        <span>- Tobias Lindqvist, Founder of BrightPath Digital (Sweden)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section" id="contact">
+    <h2>Get In Touch</h2>
+    <form class="contact-form" action="https://formspree.io/f/yourformid" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit" class="btn btn-primary">Send Message</button>
+    </form>
+    <div class="contact-info">
+      <p>Email: <a href="mailto:khadijatoduyemi@gmail.com">khadijatoduyemi@gmail.com</a></p>
+      <p>WhatsApp: <a href="https://wa.me/message/OTVHJH6FUULDL1" target="_blank">Chat Now</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/khadijatoduyemi" target="_blank">View Profile</a></p>
+      <a href="https://upwork.com/freelancers/~011f11437cb65a598f" target="_blank" class="btn btn-upwork">Hire Me on Upwork</a>
+    </div>
+  </section>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/message/OTVHJH6FUULDL1" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+    <img src="asset-headshot/whatsapp-icon.png" alt="WhatsApp" />
+  </a>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Khadijat Oduyemi. Helping businesses run smoother, one task at a time.
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
