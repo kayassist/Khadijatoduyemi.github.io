@@ -1,727 +1,364 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
-  <meta charset="UTF-8">
-
-  <title>Khadijat Oduyemi - Chaos-Free Growth: Virtual Assistant Services for Founders</title>
-
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-
-  <link rel="stylesheet" href="main.css">
-
-  <!-- Favicon logo for tab bar -->
-
-  <link rel="icon" type="image/png" href="asset-whatsapp/kay-logo.png">
-
-  <style>
-
-    body { background: #008080; font-family: Arial, sans-serif; margin: 0; padding: 20px; }
-
-    section { background: #008080 !important; }
-
-    /* Text color mixture: white, black, gold */
-
-    h1, h2, h3 { color: #fff; }
-
-    .hero-headline { color: #FFD700; }
-
-    .hero-subheadline { color: #fff; }
-
-    .hero-body, .impact-section p, .service-card p, .portfolio-metric, .contact-info { color: #222; }
-
-    .emphasis, .metric-card h3, .service-card h3 { color: #FFD700; }
-
-    .impact-callout { color: #FFD700; }
-
-    .metric { color: #008060; }
-
-    /* Navbar */
-
-    .navbar { display: flex; align-items: center; background: #fff; border-bottom: 1px solid #e0e0e0; padding: 12px 0; }
-
-    .logo-circle { width: 40px; height: 40px; background: #292d32; color: #FFD700; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.3em; margin-right: 20px; }
-
-    .nav-links { list-style: none; display: flex; gap: 18px; margin: 0; padding: 0; }
-
-    .nav-links li a { text-decoration: none; color: #292d32; font-weight: 500; transition: color 0.2s; }
-
-    .nav-links li a:hover { color: #FFD700; }
-
-    /* Hero Section Layout */
-
-    .hero-section { padding: 36px 0 24px 0; }
-
-    .hero-content {
-
-      display: flex;
-
-      flex-wrap: wrap;
-
-      align-items: center;
-
-      gap: 28px;
-
-      justify-content: space-between;
-
-    }
-
-    /* Upright oval headshot */
-
-    .hero-photo {
-
-      order: 2; /* Move to the right */
-
-      flex-shrink: 0;
-
-      display: flex;
-
-      justify-content: flex-end;
-
-      width: 350px;
-
-      min-width: 300px;
-
-    }
-
-    .hero-photo img {
-
-      width: 270px;
-
-      height: 370px;
-
-      object-fit: cover;
-
-      border-radius: 50%/38%;
-
-      border: 10px solid #FFD700;
-
-      box-shadow: 0 4px 32px rgba(0,0,0,0.17);
-
-      background: #fff;
-
-      display: block;
-
-    }
-
-    .hero-text {
-
-      order: 1;
-
-      max-width: 540px;
-
-      flex: 1 1 320px;
-
-    }
-
-    .hero-actions { display: flex; gap: 16px; }
-
-    .btn { display: inline-block; padding: 10px 22px; border-radius: 5px; font-weight: 600; text-decoration: none; }
-
-    .btn-whatsapp { background: #25d366; color: #fff; }
-
-    .btn-upwork { background: #6fda44; color: #292d32; }
-
-    .impact-section { padding: 36px 0; }
-
-    .impact-metrics { display: flex; flex-wrap: wrap; gap: 16px; }
-
-    .metric-card {
-
-      background: #009688 !important;
-
-      border-radius: 6px;
-
-      padding: 18px;
-
-      box-shadow: 0 1px 5px #e0e0e0;
-
-      flex: 1;
-
-      min-width: 220px;
-
-    }
-
-    .work-process-section { padding: 36px 0; }
-
-    .work-steps { padding-left: 20px; margin: 0; }
-
-    .services-section { padding: 36px 0; }
-
-    .services-grid { display: flex; flex-wrap: wrap; gap: 16px; }
-
-    .service-card {
-
-      background: #009688 !important;
-
-      border-radius: 6px;
-
-      padding: 18px;
-
-      flex: 1;
-
-      min-width: 210px;
-
-      box-shadow: 0 1px 5px #e0e0e0;
-
-    }
-
-    .metric { display: inline-block; background: #dff6e9; padding: 2px 10px; margin-bottom: 8px; border-radius: 4px; font-size: 0.95em; }
-
-    .portfolio-section { padding: 36px 0; }
-
-    .portfolio-gallery { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 15px; }
-
-    .work-img {
-
-      width: 220px;
-
-      border-radius: 6px;
-
-      border: 1px solid #e0e0e0;
-
-      background: #009688 !important;
-
-    }
-
-    .portfolio-metrics { display: flex; gap: 32px; font-size: 1.2em; font-weight: 600; }
-
-    .carousel-section { padding: 36px 0; }
-
-    .carousel { display: flex; align-items: center; gap: 18px; }
-
-    .carousel-btn { background: #292d32; color: #FFD700; border: none; padding: 10px 13px; border-radius: 50%; cursor: pointer; font-size: 1.2em; }
-
-    .carousel-track { display: flex; gap: 10px; }
-
-    .cert-img {
-
-      width: 120px;
-
-      border-radius: 6px;
-
-      border: 1px solid #e0e0e0;
-
-      background: #009688 !important;
-
-    }
-
-    .documents-section { padding: 36px 0; }
-
-    .doc-grid { display: flex; gap: 16px; flex-wrap: wrap; }
-
-    .doc-frame {
-
-      background: #009688 !important;
-
-      padding: 10px;
-
-      border-radius: 8px;
-
-      box-shadow: 0 1px 5px #e0e0e0;
-
-      display: flex;
-
-      flex-direction: column;
-
-      align-items: center;
-
-    }
-
-    .doc-frame iframe { width: 260px; height: 320px; border: 1px solid #ccc; border-radius: 6px; }
-
-    .btn-download { background: #292d32; color: #FFD700; margin-top: 10px; }
-
-    .contact-section { padding: 36px 0; }
-
-    .contact-form { display: flex; flex-direction: column; gap: 12px; max-width: 400px; margin-bottom: 20px; }
-
-    .contact-form input, .contact-form textarea { padding: 8px 10px; border-radius: 4px; border: 1px solid #ccc; }
-
-    .btn-primary { background: #d43f8d; color: #fff; border: none; }
-
-    .contact-info a { color: #FFD700; text-decoration: underline; }
-
-    .whatsapp-float { position: fixed; bottom: 24px; right: 24px; z-index: 100; }
-
-    .whatsapp-float img { width: 56px; height: 56px; }
-
-    footer { text-align: center; color: #555; padding: 18px 0; background: #fff; font-size: 1em; margin-top: 20px; border-top: 1px solid #e0e0e0; }
-
-    @media (max-width: 900px) {
-
-      .hero-content, .impact-metrics, .services-grid, .portfolio-gallery, .portfolio-metrics, .carousel-track, .doc-grid { flex-direction: column; align-items: stretch; }
-
-      .work-img, .cert-img, .doc-frame iframe, .hero-photo img { width: 100%; max-width: 320px; }
-
-      .hero-photo, .hero-text { width: 100%; min-width: 0; }
-
-      .hero-content { gap: 18px; }
-
-    }
-
-  </style>
-
+  <meta charset="UTF-8">
+  <title>Khadijat Oduyemi - Chaos-Free Growth: Virtual Assistant Services for Founders</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="main.css">
+  <!-- Favicon logo for tab bar -->
+  <link rel="icon" type="image/png" href="asset-whatsapp/kay-logo.png">
+  <style>
+    body { background: #008080; font-family: Arial, sans-serif; margin: 0; padding: 20px; }
+    section { background: #008080 !important; }
+    /* Text color mixture: white, black, gold */
+    h1, h2, h3 { color: #fff; }
+    .hero-headline { color: #FFD700; }
+    .hero-subheadline { color: #fff; }
+    .hero-body, .impact-section p, .service-card p, .portfolio-metric, .contact-info { color: #222; }
+    .emphasis, .metric-card h3, .service-card h3 { color: #FFD700; }
+    .impact-callout { color: #FFD700; }
+    .metric { color: #008060; }
+    /* Navbar */
+    .navbar { display: flex; align-items: center; background: #fff; border-bottom: 1px solid #e0e0e0; padding: 12px 0; }
+    .logo-circle { width: 40px; height: 40px; background: #292d32; color: #FFD700; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.3em; margin-right: 20px; }
+    .nav-links { list-style: none; display: flex; gap: 18px; margin: 0; padding: 0; }
+    .nav-links li a { text-decoration: none; color: #292d32; font-weight: 500; transition: color 0.2s; }
+    .nav-links li a:hover { color: #FFD700; }
+    /* Hero Section Layout */
+    .hero-section { padding: 36px 0 24px 0; }
+    .hero-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 28px;
+      justify-content: space-between;
+    }
+    /* Upright oval headshot */
+    .hero-photo {
+      order: 2; /* Move to the right */
+      flex-shrink: 0;
+      display: flex;
+      justify-content: flex-end;
+      width: 350px;
+      min-width: 300px;
+    }
+    .hero-photo img {
+      width: 270px;
+      height: 370px;
+      object-fit: cover;
+      border-radius: 50%/38%;
+      border: 10px solid #FFD700;
+      box-shadow: 0 4px 32px rgba(0,0,0,0.17);
+      background: #fff;
+      display: block;
+    }
+    .hero-text {
+      order: 1;
+      max-width: 540px;
+      flex: 1 1 320px;
+    }
+    .hero-actions { display: flex; gap: 16px; }
+    .btn { display: inline-block; padding: 10px 22px; border-radius: 5px; font-weight: 600; text-decoration: none; }
+    .btn-whatsapp { background: #25d366; color: #fff; }
+    .btn-upwork { background: #6fda44; color: #292d32; }
+    .impact-section { padding: 36px 0; }
+    .impact-metrics { display: flex; flex-wrap: wrap; gap: 16px; }
+    .metric-card {
+      background: #009688 !important;
+      border-radius: 6px;
+      padding: 18px;
+      box-shadow: 0 1px 5px #e0e0e0;
+      flex: 1;
+      min-width: 220px;
+    }
+    .work-process-section { padding: 36px 0; }
+    .work-steps { padding-left: 20px; margin: 0; }
+    .services-section { padding: 36px 0; }
+    .services-grid { display: flex; flex-wrap: wrap; gap: 16px; }
+    .service-card {
+      background: #009688 !important;
+      border-radius: 6px;
+      padding: 18px;
+      flex: 1;
+      min-width: 210px;
+      box-shadow: 0 1px 5px #e0e0e0;
+    }
+    .metric { display: inline-block; background: #dff6e9; padding: 2px 10px; margin-bottom: 8px; border-radius: 4px; font-size: 0.95em; }
+    .portfolio-section { padding: 36px 0; }
+    .portfolio-gallery { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 15px; }
+    .work-img {
+      width: 220px;
+      border-radius: 6px;
+      border: 1px solid #e0e0e0;
+      background: #009688 !important;
+    }
+    .portfolio-metrics { display: flex; gap: 32px; font-size: 1.2em; font-weight: 600; }
+    .carousel-section { padding: 36px 0; }
+    .carousel { display: flex; align-items: center; gap: 18px; }
+    .carousel-btn { background: #292d32; color: #FFD700; border: none; padding: 10px 13px; border-radius: 50%; cursor: pointer; font-size: 1.2em; }
+    .carousel-track { display: flex; gap: 10px; }
+    .cert-img {
+      width: 120px;
+      border-radius: 6px;
+      border: 1px solid #e0e0e0;
+      background: #009688 !important;
+    }
+    .documents-section { padding: 36px 0; }
+    .doc-grid { display: flex; gap: 16px; flex-wrap: wrap; }
+    .doc-frame {
+      background: #009688 !important;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 1px 5px #e0e0e0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .doc-frame iframe { width: 260px; height: 320px; border: 1px solid #ccc; border-radius: 6px; }
+    .btn-download { background: #292d32; color: #FFD700; margin-top: 10px; }
+    .contact-section { padding: 36px 0; }
+    .contact-form { display: flex; flex-direction: column; gap: 12px; max-width: 400px; margin-bottom: 20px; }
+    .contact-form input, .contact-form textarea { padding: 8px 10px; border-radius: 4px; border: 1px solid #ccc; }
+    .btn-primary { background: #d43f8d; color: #fff; border: none; }
+    .contact-info a { color: #FFD700; text-decoration: underline; }
+    .whatsapp-float { position: fixed; bottom: 24px; right: 24px; z-index: 100; }
+    .whatsapp-float img { width: 56px; height: 56px; }
+    footer { text-align: center; color: #555; padding: 18px 0; background: #fff; font-size: 1em; margin-top: 20px; border-top: 1px solid #e0e0e0; }
+    @media (max-width: 900px) {
+      .hero-content, .impact-metrics, .services-grid, .portfolio-gallery, .portfolio-metrics, .carousel-track, .doc-grid { flex-direction: column; align-items: stretch; }
+      .work-img, .cert-img, .doc-frame iframe, .hero-photo img { width: 100%; max-width: 320px; }
+      .hero-photo, .hero-text { width: 100%; min-width: 0; }
+      .hero-content { gap: 18px; }
+    }
+  </style>
 </head>
-
 <body>
-
-  <!-- Navbar -->
-
-  <nav class="navbar">
-
-    <div class="logo-circle">KO</div>
-
-    <ul class="nav-links">
-
-      <li><a href="#impact">Client Impact</a></li>
-
-      <li><a href="#work-process">How We Work</a></li>
-
-      <li><a href="#services">Services</a></li>
-
-      <li><a href="#portfolio">Proof & Results</a></li>
-
-      <li><a href="#credentials">Credentials</a></li>
-
-      <li><a href="#documents">CV & Portfolios</a></li>
-
-      <li><a href="#contact">Contact</a></li>
-
-    </ul>
-
-  </nav>
-
-
-
-  <!-- Hero Section -->
-
-  <section class="hero-section">
-
-    <div class="hero-content">
-
-      <div class="hero-text">
-
-        <h2 class="hero-headline">Your team's time is precious.<br>Protect it. Multiply it.</h2>
-
-        <h3 class="hero-subheadline">98% of clients reclaim 10+ hours a week with my systems.</h3>
-
-        <p class="hero-body">
-
-          Inbox overload? Back-to-back calendars?<br>
-
-          My support turns busy founders into focused leaders.<br>
-
-          <span class="emphasis">Ready for less chaos and more results?</span>
-
-        </p>
-
-        <div class="hero-actions">
-
-          <a href="https://wa.me/message/OTVHJH6FUULDL1" class="btn btn-whatsapp" target="_blank">Chat now on WhatsApp</a>
-
-          <a href="https://upwork.com/freelancers/~011f11437cb65a598f" class="btn btn-upwork" target="_blank">Hire Me on Upwork</a>
-
-        </div>
-
-      </div>
-
-      <div class="hero-photo">
-
-        <img src="asset-%20headshot/Kay-Headshot.png" alt="Khadijat Oduyemi headshot">
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- Impact Section: Client Results & Metrics -->
-
-  <section class="impact-section" id="impact">
-
-    <h2>Client Impact At a Glance</h2>
-
-    <div class="impact-metrics">
-
-      <div class="metric-card">
-
-        <h3>Inbox Zero in 24h</h3>
-
-        <p>Clients see a 90% reduction in unread emails—fast, accurate triage.</p>
-
-      </div>
-
-      <div class="metric-card">
-
-        <h3>10+ Hours Saved Weekly</h3>
-
-        <p>My systems free founders for strategy, not admin.</p>
-
-      </div>
-
-      <div class="metric-card">
-
-        <h3>99.9% Accuracy</h3>
-
-        <p>Data entry, CRM, and reporting—no costly mistakes.</p>
-
-      </div>
-
-      <div class="metric-card">
-
-        <h3>4x Faster Scheduling</h3>
-
-        <p>Meetings booked without double-booking or missed slots.</p>
-
-      </div>
-
-      <div class="metric-card">
-
-        <h3>24h Response Guarantee</h3>
-
-        <p>Your clients and team never wait for answers.</p>
-
-      </div>
-
-      <div class="metric-card">
-
-        <h3>80%+ Appointment Conversion</h3>
-
-        <p>Follow-up systems that turn interest into action.</p>
-
-      </div>
-
-    </div>
-
-    <div class="impact-callout">
-
-      <span>What could your team do with 10 more productive hours—every week?</span>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- Work Process Section -->
-
-  <section class="work-process-section" id="work-process">
-
-    <h2>How We Work Together</h2>
-
-    <ol class="work-steps">
-
-      <li><strong>Goal Mapping:</strong> We define your highest-impact priorities.</li>
-
-      <li><strong>System Setup:</strong> I integrate with your tools (Gmail, HubSpot, Google Calendar, etc.)</li>
-
-      <li><strong>Daily Operations:</strong> I handle the admin so you stay focused on leadership.</li>
-
-      <li><strong>Weekly Metrics:</strong> You get clear reports—what’s working, what’s next.</li>
-
-      <li><strong>Review & Refine:</strong> We optimize together for even better results.</li>
-
-    </ol>
-
-  </section>
-
-  <!-- Services Section: Results-driven -->
-
-  <section class="services-section" id="services">
-
-    <h2>Services That Drive Your Results</h2>
-
-    <div class="services-grid">
-
-      <div class="service-card">
-
-        <h3>Scheduling & Calendar</h3>
-
-        <span class="metric">4x faster booking</span>
-
-        <p>Zero missed meetings, less friction, more connections.</p>
-
-      </div>
-
-      <div class="service-card">
-
-        <h3>Email & Inbox</h3>
-
-        <span class="metric">Inbox Zero in 24h</span>
-
-        <p>Urgent sorted, spam filtered, clients answered—always.</p>
-
-      </div>
-
-      <div class="service-card">
-
-        <h3>Client Support</h3>
-
-        <span class="metric">24h response guarantee</span>
-
-        <p>Your clients get answers, not auto-replies.</p>
-
-      </div>
-
-      <div class="service-card">
-
-        <h3>Data Entry & Reporting</h3>
-
-        <span class="metric">99.9% accuracy</span>
-
-        <p>Clean, actionable data to fuel your growth.</p>
-
-      </div>
-
-      <div class="service-card">
-
-        <h3>Onboarding & Admin</h3>
-
-        <span class="metric">Same-day setup</span>
-
-        <p>New hires, new clients—smooth, stress-free onboarding.</p>
-
-      </div>
-
-      <div class="service-card">
-
-        <h3>Project Management</h3>
-
-        <span class="metric">Deadlines met, goals tracked</span>
-
-        <p>HubSpot, Google Workspace, and more—organized, always.</p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- Portfolio: Proof & Results -->
-
-  <section class="portfolio-section" id="portfolio">
-
-    <h2>Proof & Results</h2>
-
-    <div class="portfolio-gallery">
-
-      <img src="asset-work-sample-data%20Entry/sample1.png" alt="Data Entry Result" class="work-img">
-
-      <img src="asset-work-sample-email-management/Email%20Pic.png" alt="Inbox Management Result" class="work-img">
-
-      <img src="asset-work-sample-Google%20Calendar/Calendar%201.png" alt="Calendar Management Result" class="work-img">
-
-      <img src="asset-work-sample-hubspot-project-management/Hubspot%201.png" alt="HubSpot Project Management Result" class="work-img">
-
-      <img src="asset-work-sample-scheduling/Calendly%201.png" alt="Scheduling Result" class="work-img">
-
-    </div>
-
-    <div class="portfolio-metrics">
-
-      <div class="portfolio-metric">
-
-        <strong>98%</strong> inbox cleared in 24h
-
-      </div>
-
-      <div class="portfolio-metric">
-
-        <strong>99.9%</strong> accuracy in reporting
-
-      </div>
-
-      <div class="portfolio-metric">
-
-        <strong>10+</strong> hours saved each week for clients
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- Credentials Carousel -->
-
-  <section class="carousel-section" id="credentials">
-
-    <h2>Credentials</h2>
-
-    <div class="carousel">
-
-      <button class="carousel-btn left" onclick="prevSlide()">&#8592;</button>
-
-      <div class="carousel-track">
-
-        <img src="asset-certificates/1734861981230.jpg" alt="Certificate 1" class="cert-img">
-
-        <img src="asset-certificates/1734970936922.jpg" alt="Certificate 2" class="cert-img">
-
-        <img src="asset-certificates/1735021415742.jpg" alt="Certificate 3" class="cert-img">
-
-        <img src="asset-certificates/1735130774829.jpg" alt="Certificate 4" class="cert-img">
-
-        <img src="asset-certificates/1735138619237.jpg" alt="Certificate 5" class="cert-img">
-
-        <img src="asset-certificates/1735141641019.jpg" alt="Certificate 6" class="cert-img">
-
-        <img src="asset-certificates/72-virtual-assistant-certificate-khadijat-oduyemi%20(1).png" alt="Virtual Assistant Certificate" class="cert-img">
-
-        <img src="asset-certificates/KHADIJAT%20ODUYEMI%20(2).png" alt="Khadijat Oduyemi Certificate" class="cert-img">
-
-        <img src="asset-certificates/Prof.%20Admin.jpg" alt="Professional Admin Certificate" class="cert-img">
-
-      </div>
-
-      <button class="carousel-btn right" onclick="nextSlide()">&#8594;</button>
-
-    </div>
-
-    <div class="pdf-list" style="margin-top:16px;">
-
-      <iframe src="asset-certificates/Copy%20of%20CUSTOMER%20SERVICE%20CERTIFICATE.pdf" title="Customer Service Certificate"></iframe>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- Documents Section -->
-
-  <section class="documents-section" id="documents">
-
-    <h2>CV & Portfolios</h2>
-
-    <div class="doc-grid">
-
-      <div class="doc-frame">
-
-        <iframe src="asset-pdf/KHADIJAT%20ODUYEMI%20-%20VA%20CV.pdf" frameborder="0"></iframe>
-
-        <a href="asset-pdf/KHADIJAT%20ODUYEMI%20-%20VA%20CV.pdf" download class="btn btn-download">Download CV</a>
-
-      </div>
-
-      <div class="doc-frame">
-
-        <iframe src="asset-pdf/Kay%20VA%20Portfolio.pdf" frameborder="0"></iframe>
-
-        <a href="asset-pdf/Kay%20VA%20Portfolio.pdf" download class="btn btn-download">Download VA Portfolio</a>
-
-      </div>
-
-      <div class="doc-frame">
-
-        <iframe src="asset-pdf/Kay%20CS%20Portfolio.pdf" frameborder="0"></iframe>
-
-        <a href="asset-pdf/Kay%20CS%20Portfolio.pdf" download class="btn btn-download">Download CS Portfolio</a>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- Travel Management Images -->
-
-  <section class="portfolio-section" id="travel-management">
-
-    <h2>Travel Management Images</h2>
-
-    <div class="portfolio-gallery">
-
-      <img src="asset-travel-management/Accomodation%202.png" alt="Accommodation 2" class="work-img">
-
-      <img src="asset-travel-management/Accomodation%203.png" alt="Accommodation 3" class="work-img">
-
-      <img src="asset-travel-management/Accomodation%20booking%20.png" alt="Accommodation Booking" class="work-img">
-
-      <img src="asset-travel-management/Flight%20booking%201.png" alt="Flight Booking 1" class="work-img">
-
-      <img src="asset-travel-management/Flight%20booking%202.png" alt="Flight Booking 2" class="work-img">
-
-      <img src="asset-travel-management/Flight%20booking%203.png" alt="Flight Booking 3" class="work-img">
-
-      <img src="asset-travel-management/Screenshot%202025-02-07%20041548.png" alt="Screenshot 1" class="work-img">
-
-      <img src="asset-travel-management/Screenshot%202025-02-07%20041628.png" alt="Screenshot 2" class="work-img">
-
-      <img src="asset-travel-management/flight%20booking%204.png" alt="Flight Booking 4" class="work-img">
-
-    </div>
-
-  </section>
-
-
-
-  <!-- Contact Section -->
-
-  <section class="contact-section" id="contact">
-
-    <h2>Ready to Reclaim Your Time?</h2>
-
-    <form class="contact-form" action="https://formspree.io/f/yourformid" method="POST">
-
-      <input type="text" name="name" placeholder="Your Name" required>
-
-      <input type="email" name="email" placeholder="Your Email" required>
-
-      <textarea name="message" placeholder="What’s your biggest admin headache?" rows="5" required></textarea>
-
-      <button type="submit" class="btn btn-primary">Send Message</button>
-
-    </form>
-
-    <div class="contact-info">
-
-      <p>Email: <a href="mailto:khadijatoduyemi@gmail.com">khadijatoduyemi@gmail.com</a></p>
-
-      <p>WhatsApp: <a href="https://wa.me/message/OTVHJH6FUULDL1" target="_blank">Chat Now</a></p>
-
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/khadijatoduyemi" target="_blank">View Profile</a></p>
-
-      <a href="https://upwork.com/freelancers/~011f11437cb65a598f" target="_blank" class="btn btn-upwork">Hire Me on Upwork</a>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- WhatsApp Floating Button (SVG) -->
-
-  <a href="https://wa.me/message/OTVHJH6FUULDL1" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
-
-    <img src="asset-whatsapp/WhatsApp.svg" alt="WhatsApp" />
-
-  </a>
-
-
-
-  <!-- Footer -->
-
-  <footer>
-
-    <span>© 2025 Khadijat Oduyemi. Your growth, minus the chaos.</span>
-
-  </footer>
-
-
-
-  <script src="main.js"></script>
-
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo-circle">KO</div>
+    <ul class="nav-links">
+      <li><a href="#impact">Client Impact</a></li>
+      <li><a href="#work-process">How We Work</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Proof & Results</a></li>
+      <li><a href="#credentials">Credentials</a></li>
+      <li><a href="#documents">CV & Portfolios</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h2 class="hero-headline">Your team's time is precious.<br>Protect it. Multiply it.</h2>
+        <h3 class="hero-subheadline">98% of clients reclaim 10+ hours a week with my systems.</h3>
+        <p class="hero-body">
+          Inbox overload? Back-to-back calendars?<br>
+          My support turns busy founders into focused leaders.<br>
+          <span class="emphasis">Ready for less chaos and more results?</span>
+        </p>
+        <div class="hero-actions">
+          <a href="https://wa.me/message/OTVHJH6FUULDL1  " class="btn btn-whatsapp" target="_blank">Chat now on WhatsApp</a>
+          <a href="https://upwork.com/freelancers/~011f11437cb65a598f  " class="btn btn-upwork" target="_blank">Hire Me on Upwork</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="asset-%20headshot/Kay-Headshot.png" alt="Khadijat Oduyemi headshot">
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact Section: Client Results & Metrics -->
+  <section class="impact-section" id="impact">
+    <h2>Client Impact At a Glance</h2>
+    <div class="impact-metrics">
+      <div class="metric-card">
+        <h3>Inbox Zero in 24h</h3>
+        <p>Clients see a 90% reduction in unread emails—fast, accurate triage.</p>
+      </div>
+      <div class="metric-card">
+        <h3>10+ Hours Saved Weekly</h3>
+        <p>My systems free founders for strategy, not admin.</p>
+      </div>
+      <div class="metric-card">
+        <h3>99.9% Accuracy</h3>
+        <p>Data entry, CRM, and reporting—no costly mistakes.</p>
+      </div>
+      <div class="metric-card">
+        <h3>4x Faster Scheduling</h3>
+        <p>Meetings booked without double-booking or missed slots.</p>
+      </div>
+      <div class="metric-card">
+        <h3>24h Response Guarantee</h3>
+        <p>Your clients and team never wait for answers.</p>
+      </div>
+      <div class="metric-card">
+        <h3>80%+ Appointment Conversion</h3>
+        <p>Follow-up systems that turn interest into action.</p>
+      </div>
+    </div>
+    <div class="impact-callout">
+      <span>What could your team do with 10 more productive hours—every week?</span>
+    </div>
+  </section>
+
+  <!-- Work Process Section -->
+  <section class="work-process-section" id="work-process">
+    <h2>How We Work Together</h2>
+    <ol class="work-steps">
+      <li><strong>Goal Mapping:</strong> We define your highest-impact priorities.</li>
+      <li><strong>System Setup:</strong> I integrate with your tools (Gmail, HubSpot, Google Calendar, etc.)</li>
+      <li><strong>Daily Operations:</strong> I handle the admin so you stay focused on leadership.</li>
+      <li><strong>Weekly Metrics:</strong> You get clear reports—what’s working, what’s next.</li>
+      <li><strong>Review & Refine:</strong> We optimize together for even better results.</li>
+    </ol>
+  </section>
+  <!-- Services Section: Results-driven -->
+  <section class="services-section" id="services">
+    <h2>Services That Drive Your Results</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>Scheduling & Calendar</h3>
+        <span class="metric">4x faster booking</span>
+        <p>Zero missed meetings, less friction, more connections.</p>
+      </div>
+      <div class="service-card">
+        <h3>Email & Inbox</h3>
+        <span class="metric">Inbox Zero in 24h</span>
+        <p>Urgent sorted, spam filtered, clients answered—always.</p>
+      </div>
+      <div class="service-card">
+        <h3>Client Support</h3>
+        <span class="metric">24h response guarantee</span>
+        <p>Your clients get answers, not auto-replies.</p>
+      </div>
+      <div class="service-card">
+        <h3>Data Entry & Reporting</h3>
+        <span class="metric">99.9% accuracy</span>
+        <p>Clean, actionable data to fuel your growth.</p>
+      </div>
+      <div class="service-card">
+        <h3>Onboarding & Admin</h3>
+        <span class="metric">Same-day setup</span>
+        <p>New hires, new clients—smooth, stress-free onboarding.</p>
+      </div>
+      <div class="service-card">
+        <h3>Project Management</h3>
+        <span class="metric">Deadlines met, goals tracked</span>
+        <p>HubSpot, Google Workspace, and more—organized, always.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio: Proof & Results -->
+  <section class="portfolio-section" id="portfolio">
+    <h2>Proof & Results</h2>
+    <div class="portfolio-gallery">
+      <img src="asset-work-sample-data%20Entry/sample1.png" alt="Data Entry Result" class="work-img">
+      <img src="asset-work-sample-email-management/Email%20Pic.png" alt="Inbox Management Result" class="work-img">
+      <img src="asset-work-sample-Google%20Calendar/Calendar%201.png" alt="Calendar Management Result" class="work-img">
+      <img src="asset-work-sample-hubspot-project-management/Hubspot%201.png" alt="HubSpot Project Management Result" class="work-img">
+      <img src="asset-work-sample-scheduling/Calendly%201.png" alt="Scheduling Result" class="work-img">
+    </div>
+    <div class="portfolio-metrics">
+      <div class="portfolio-metric">
+        <strong>98%</strong> inbox cleared in 24h
+      </div>
+      <div class="portfolio-metric">
+        <strong>99.9%</strong> accuracy in reporting
+      </div>
+      <div class="portfolio-metric">
+        <strong>10+</strong> hours saved each week for clients
+      </div>
+    </div>
+  </section>
+
+  <!-- Credentials Carousel -->
+  <section class="carousel-section" id="credentials">
+    <h2>Credentials</h2>
+    <div class="carousel">
+      <button class="carousel-btn left" onclick="prevSlide()">&#8592;</button>
+      <div class="carousel-track">
+        <img src="asset-certificates/1734861981230.jpg" alt="Certificate 1" class="cert-img">
+        <img src="asset-certificates/1734970936922.jpg" alt="Certificate 2" class="cert-img">
+        <img src="asset-certificates/1735021415742.jpg" alt="Certificate 3" class="cert-img">
+        <img src="asset-certificates/1735130774829.jpg" alt="Certificate 4" class="cert-img">
+        <img src="asset-certificates/1735138619237.jpg" alt="Certificate 5" class="cert-img">
+        <img src="asset-certificates/1735141641019.jpg" alt="Certificate 6" class="cert-img">
+        <img src="asset-certificates/72-virtual-assistant-certificate-khadijat-oduyemi%20(1).png" alt="Virtual Assistant Certificate" class="cert-img">
+        <img src="asset-certificates/KHADIJAT%20ODUYEMI%20(2).png" alt="Khadijat Oduyemi Certificate" class="cert-img">
+        <img src="asset-certificates/Prof.%20Admin.jpg" alt="Professional Admin Certificate" class="cert-img">
+      </div>
+      <button class="carousel-btn right" onclick="nextSlide()">&#8594;</button>
+    </div>
+    <div class="pdf-list" style="margin-top:16px;">
+      <iframe src="asset-certificates/Copy%20of%20CUSTOMER%20SERVICE%20CERTIFICATE.pdf" title="Customer Service Certificate"></iframe>
+    </div>
+  </section>
+
+  <!-- Documents Section -->
+  <section class="documents-section" id="documents">
+    <h2>CV & Portfolios</h2>
+    <div class="doc-grid">
+      <div class="doc-frame">
+        <iframe src="asset-pdf/KHADIJAT%20ODUYEMI%20-%20VA%20CV.pdf" frameborder="0"></iframe>
+        <a href="asset-pdf/KHADIJAT%20ODUYEMI%20-%20VA%20CV.pdf" download class="btn btn-download">Download CV</a>
+      </div>
+      <div class="doc-frame">
+        <iframe src="asset-pdf/Kay%20VA%20Portfolio.pdf" frameborder="0"></iframe>
+        <a href="asset-pdf/Kay%20VA%20Portfolio.pdf" download class="btn btn-download">Download VA Portfolio</a>
+      </div>
+      <div class="doc-frame">
+        <iframe src="asset-pdf/Kay%20CS%20Portfolio.pdf" frameborder="0"></iframe>
+        <a href="asset-pdf/Kay%20CS%20Portfolio.pdf" download class="btn btn-download">Download CS Portfolio</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Travel Management Images -->
+  <section class="portfolio-section" id="travel-management">
+    <h2>Travel Management Images</h2>
+    <div class="portfolio-gallery">
+      <img src="asset-travel-management/Accomodation%202.png" alt="Accommodation 2" class="work-img">
+      <img src="asset-travel-management/Accomodation%203.png" alt="Accommodation 3" class="work-img">
+      <img src="asset-travel-management/Accomodation%20booking%20.png" alt="Accommodation Booking" class="work-img">
+      <img src="asset-travel-management/Flight%20booking%201.png" alt="Flight Booking 1" class="work-img">
+      <img src="asset-travel-management/Flight%20booking%202.png" alt="Flight Booking 2" class="work-img">
+      <img src="asset-travel-management/Flight%20booking%203.png" alt="Flight Booking 3" class="work-img">
+      <img src="asset-travel-management/Screenshot%202025-02-07%20041548.png" alt="Screenshot 1" class="work-img">
+      <img src="asset-travel-management/Screenshot%202025-02-07%20041628.png" alt="Screenshot 2" class="work-img">
+      <img src="asset-travel-management/flight%20booking%204.png" alt="Flight Booking 4" class="work-img">
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section" id="contact">
+    <h2>Ready to Reclaim Your Time?</h2>
+    <form class="contact-form" action="https://formspree.io/f/yourformid  " method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="What’s your biggest admin headache?" rows="5" required></textarea>
+      <button type="submit" class="btn btn-primary">Send Message</button>
+    </form>
+    <div class="contact-info">
+      <p>Email: <a href="mailto:khadijatoduyemi@gmail.com">khadijatoduyemi@gmail.com</a></p>
+      <p>WhatsApp: <a href="https://wa.me/message/OTVHJH6FUULDL1  " target="_blank">Chat Now</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/khadijatoduyemi  " target="_blank">View Profile</a></p>
+      <a href="https://upwork.com/freelancers/~011f11437cb65a598f  " target="_blank" class="btn btn-upwork">Hire Me on Upwork</a>
+    </div>
+  </section>
+
+  <!-- WhatsApp Floating Button (SVG) -->
+  <a href="https://wa.me/message/OTVHJH6FUULDL1  " class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+    <img src="asset-whatsapp/WhatsApp.svg" alt="WhatsApp" />
+  </a>
+
+  <!-- Footer -->
+  <footer>
+    <span>© 2025 Khadijat Oduyemi. Your growth, minus the chaos.</span>
+  </footer>
+
+  <script src="main.js"></script>
 </body>
-
 </html>
